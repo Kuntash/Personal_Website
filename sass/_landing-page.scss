@@ -1,0 +1,67 @@
+@use 'variables';
+@use 'utilities';
+.main {
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(
+    to right,
+    variables.$white,
+    variables.$white 70.15%,
+    variables.$blue-dark 70.15%
+  );
+
+  &--heading {
+    max-width: 72.3rem;
+    position: absolute;
+    left: 16.8rem;
+    top: 18.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      .main-comment {
+        @include utilities.BOTTOM-MARGIN(3.5rem);
+        animation-name: top-to-bottom;
+        animation-duration: 2s;
+        .main-button {
+          border: none;
+          background-color: variables.$blue-dark;
+          padding: 3.3rem 2.7rem;
+          color: variables.$white;
+          border-radius: 1rem;
+          border-bottom-right-radius: 0;
+          position: relative;
+          .TOOL-TIP {
+            position: absolute;
+            background-color: inherit;
+            height: 2.4rem;
+            width: 2.3rem;
+            bottom: -2.3rem;
+            right: 0;
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+          }
+        }
+      }
+      .main-title {
+        font-size: variables.$title-desktop-size;
+        padding-left: 0.5rem;
+        animation: bottom-to-top 2s;
+        @include utilities.BOTTOM-MARGIN(1.2rem);
+      }
+
+      .sub-title {
+        animation: bottom-to-top 2s;
+        max-width: 47.6rem;
+        line-height: 1.5;
+        color: variables.$grey-dark;
+      }
+    }
+
+    &__button {
+      @include utilities.TOP-MARGIN(5.6rem);
+    }
+  }
+}
