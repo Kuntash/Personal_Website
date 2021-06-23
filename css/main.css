@@ -1,5 +1,137 @@
-body {
+.PROFILE-PIC {
+  position: absolute;
+  right: 11rem;
+  top: 3.7rem;
+  width: 46%;
+}
+
+.TITLE {
+  font-size: 7.3rem;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+}
+
+.SUBTITLE {
+  font-size: 3.1rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+.PARA {
+  font-size: 1.8rem;
+}
+
+.font-blue-dark {
+  color: #90acd2;
+}
+
+.font-orange-red {
+  color: #e45447;
+}
+
+@keyframes top-to-bottom {
+  0% {
+    transform: translateY(-10rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes bottom-to-top {
+  0% {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.main {
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(to right, #fff, #fff 70.15%, #90acd2 70.15%);
+}
+.main--heading {
+  max-width: 72.3rem;
+  position: absolute;
+  left: 16.8rem;
+  top: 18.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main--heading__title {
+  display: flex;
+  flex-direction: column;
+}
+.main--heading__title .main-comment {
+  margin-bottom: 3.5rem;
+  animation-name: top-to-bottom;
+  animation-duration: 2s;
+}
+.main--heading__title .main-comment .main-button {
+  border: none;
   background-color: #90acd2;
+  padding: 3.3rem 2.7rem;
+  color: #fff;
+  border-radius: 1rem;
+  border-bottom-right-radius: 0;
+  position: relative;
+}
+.main--heading__title .main-comment .main-button .TOOL-TIP {
+  position: absolute;
+  background-color: inherit;
+  height: 2.4rem;
+  width: 2.3rem;
+  bottom: -2.3rem;
+  right: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+.main--heading__title .main-title {
+  font-size: 7.3rem;
+  padding-left: 0.5rem;
+  animation: bottom-to-top 2s;
+  margin-bottom: 1.2rem;
+}
+.main--heading__title .sub-title {
+  animation: bottom-to-top 2s;
+  max-width: 47.6rem;
+  line-height: 1.5;
+  color: #777777;
+}
+.main--heading__button {
+  margin-top: 5.6rem;
+}
+
+.normal-button {
+  border: 0.3rem solid transparent;
+  background-color: #e45447;
+  padding: 2.5rem 8.3rem;
+  border-radius: 5rem;
+  color: #fff;
+  transition: 0.3s;
+}
+.normal-button:hover, .normal-button:active {
+  background-color: #fff;
+  color: #e45447;
+  border: 0.3rem solid #e45447;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */

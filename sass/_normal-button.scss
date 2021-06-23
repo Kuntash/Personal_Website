@@ -1,4 +1,16 @@
 @use 'variables';
-body {
-  background-color: variables.$blue-dark;
+.normal-button {
+  border: 0.3rem solid transparent;
+  background-color: variables.$orange-red;
+  padding: 2.5rem 8.3rem;
+  border-radius: 5rem;
+  color: variables.$white;
+  transition: 0.3s;
+  
+  &:hover,
+  &:active {
+    background-color: variables.$white;
+    color: variables.$orange-red;
+    border: 0.3rem solid variables.$orange-red;
+  }
 }
