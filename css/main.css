@@ -44,6 +44,9 @@
     transform: translateY(10rem);
     opacity: 0;
   }
+  75% {
+    transform: translateY(-0.5rem);
+  }
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -69,8 +72,8 @@
 }
 .main--heading__title .main-comment {
   margin-bottom: 3.5rem;
-  animation-name: top-to-bottom;
-  animation-duration: 2s;
+  opacity: 0;
+  animation: top-to-bottom 2s forwards;
 }
 .main--heading__title .main-comment .main-button {
   border: none;
@@ -92,12 +95,14 @@
 }
 .main--heading__title .main-title {
   font-size: 7.3rem;
+  opacity: 0;
   padding-left: 0.5rem;
-  animation: bottom-to-top 2s;
+  animation: bottom-to-top 2s 1s forwards;
   margin-bottom: 1.2rem;
 }
 .main--heading__title .sub-title {
-  animation: bottom-to-top 2s;
+  opacity: 0;
+  animation: bottom-to-top 2s 2s forwards;
   max-width: 47.6rem;
   line-height: 1.5;
   color: #777777;
@@ -109,7 +114,7 @@
 .normal-button {
   border: 0.3rem solid transparent;
   background-color: #e45447;
-  padding: 2.5rem 8.3rem;
+  padding: 1.8rem 6.2rem;
   border-radius: 5rem;
   color: #fff;
   transition: 0.3s;
