@@ -9,7 +9,25 @@
   width: 46%;
 }
 
+// ANCHOR TAGS INSIDE BUTTONS
+
+.BUTTON-LINK {
+  &:link,
+  &:active,
+  &:visited {
+    text-decoration: none;
+    font-family: variables.$font-para;
+    color: variables.$white;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+  }
+}
+
+.normal-button:hover .BUTTON-LINK {
+  color: variables.$orange-red;
+}
 //font sizes and colors
+
 .TITLE {
   font-size: variables.$title-desktop-size;
   font-weight: 800;
