@@ -2,6 +2,10 @@
 
 //Absolute images
 
+.LOGO-IMAGE {
+  width: 5rem;
+}
+
 .PROFILE-PIC {
   position: absolute;
   right: 11rem;
@@ -9,6 +13,21 @@
   width: 46%;
 }
 
+//ANCHOR TAGS {NORMAL}
+
+.CLICKABLE-LINK {
+  &:link,
+  &:visited,
+  &:active {
+    text-decoration: none;
+    color: variables.$black;
+  }
+
+  &:hover,
+  &:focus {
+    color: variables.$orange-red;
+  }
+}
 // ANCHOR TAGS INSIDE BUTTONS
 
 .BUTTON-LINK {
@@ -26,6 +45,9 @@
 .normal-button:hover .BUTTON-LINK {
   color: variables.$orange-red;
 }
+
+// DROP DOWN ARROWS UP AND DOWN
+
 //font sizes and colors
 
 .TITLE {

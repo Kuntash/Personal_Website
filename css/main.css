@@ -1,8 +1,20 @@
+.LOGO-IMAGE {
+  width: 5rem;
+}
+
 .PROFILE-PIC {
   position: absolute;
   right: 11rem;
   top: 3.7rem;
   width: 46%;
+}
+
+.CLICKABLE-LINK:link, .CLICKABLE-LINK:visited, .CLICKABLE-LINK:active {
+  text-decoration: none;
+  color: #000000;
+}
+.CLICKABLE-LINK:hover, .CLICKABLE-LINK:focus {
+  color: #e45447;
 }
 
 .BUTTON-LINK:link, .BUTTON-LINK:active, .BUTTON-LINK:visited {
@@ -138,28 +150,31 @@
 }
 
 .nav {
+  height: 8.5rem;
   position: fixed;
   width: 100vw;
-  background: linear-gradient(to right, #fff, #fff 70.15%, #90acd2 70.15%);
   z-index: 1;
   text-align: center;
 }
 .nav--container {
-  margin-left: 20rem;
-  max-width: 80rem;
+  height: inherit;
+  margin-left: 15.5rem;
+  width: 80rem;
+  max-width: 80em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.nav--logo {
-  flex: 1;
-}
 .nav--menu {
-  flex: 6;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+}
+.nav--menu__element {
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  margin: 3rem;
 }
 
 * {

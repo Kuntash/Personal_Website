@@ -2,6 +2,7 @@
 @use 'utilities';
 
 // Main section
+
 .main {
   height: 100vh;
   position: relative;
@@ -45,6 +46,7 @@
           position: relative;
 
           //TRIANGlE TIP
+
           .TOOL-TIP {
             position: absolute;
             background-color: inherit;
@@ -58,6 +60,7 @@
       }
 
       // TITLE: NAME
+
       .main-title {
         font-size: variables.$title-desktop-size;
         opacity: 0;
@@ -67,6 +70,7 @@
       }
 
       //SUBTITLE: DESIGNATION AND CURRENT INFO
+      
       .sub-title {
         opacity: 0;
         animation: bottom-to-top 2s 2s forwards;
