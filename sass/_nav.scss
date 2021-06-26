@@ -2,10 +2,14 @@
 
 .nav {
   height: 8.5rem;
-  position: fixed;
-  width: 100vw;
   z-index: 1;
   text-align: center;
+  background: linear-gradient(
+    to right,
+    variables.$white,
+    variables.$white 70.15%,
+    variables.$blue-dark 70.15%
+  );
 
   // NAVIGATION CONTAINER
 

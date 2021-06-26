@@ -172,10 +172,9 @@
 
 .nav {
   height: 8.5rem;
-  position: fixed;
-  width: 100vw;
   z-index: 1;
   text-align: center;
+  background: linear-gradient(to right, #fff, #fff 70.15%, #90acd2 70.15%);
 }
 .nav--container {
   height: inherit;
