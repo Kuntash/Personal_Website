@@ -1,5 +1,8 @@
 @use 'variables';
 @use 'utilities';
+
+// Main section
+
 .main {
   height: 100vh;
   position: relative;
@@ -10,6 +13,8 @@
     variables.$blue-dark 70.15%
   );
 
+  // Main heading excluding the HIRE ME button
+
   &--heading {
     max-width: 72.3rem;
     position: absolute;
@@ -19,13 +24,18 @@
     flex-direction: column;
     justify-content: space-between;
 
+    // Main TITLE: COMMENT BOX, NAME, Subtitle
+
     &__title {
       display: flex;
       flex-direction: column;
+
+      //COMMENT BOX
+
       .main-comment {
         @include utilities.BOTTOM-MARGIN(3.5rem);
-        animation-name: top-to-bottom;
-        animation-duration: 2s;
+        opacity: 0;
+        animation: top-to-bottom 2s forwards;
         .main-button {
           border: none;
           background-color: variables.$blue-dark;
@@ -34,6 +44,9 @@
           border-radius: 1rem;
           border-bottom-right-radius: 0;
           position: relative;
+
+          //TRIANGlE TIP
+
           .TOOL-TIP {
             position: absolute;
             background-color: inherit;
@@ -45,20 +58,29 @@
           }
         }
       }
+
+      // TITLE: NAME
+
       .main-title {
         font-size: variables.$title-desktop-size;
+        opacity: 0;
         padding-left: 0.5rem;
-        animation: bottom-to-top 2s;
+        animation: bottom-to-top 2s 1s forwards;
         @include utilities.BOTTOM-MARGIN(1.2rem);
       }
 
+      //SUBTITLE: DESIGNATION AND CURRENT INFO
+      
       .sub-title {
-        animation: bottom-to-top 2s;
+        opacity: 0;
+        animation: bottom-to-top 2s 2s forwards;
         max-width: 47.6rem;
         line-height: 1.5;
         color: variables.$grey-dark;
       }
     }
+
+    // HIRE ME BUTTON
 
     &__button {
       @include utilities.TOP-MARGIN(5.6rem);

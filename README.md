@@ -3,7 +3,7 @@
 - ## Development Journey
 
   - ### MAIN PAGE: define a section and use linear gradient in the background with 50% gradient to convert it to solid.
-  - ### NAV BAR: Create Navigation Block as separate component that stays on top regardless of scrolling and disappears when unresponsive for more than 3 seconds.
+  - ### NAV BAR: Create Navigation Block as separate component that stays on top regardless of scrolling and changes when scrolled for more than 100vh.
 
     > Use flexbox for layout.
 

@@ -1,9 +1,55 @@
 
+.LOGO-IMAGE {
+  width: 5rem;
+}
+
 .PROFILE-PIC {
   position: absolute;
   right: 11rem;
   top: 3.7rem;
   width: 46%;
+}
+
+.CLICKABLE-LINK:link, .CLICKABLE-LINK:visited, .CLICKABLE-LINK:active {
+  text-decoration: none;
+  color: #000000;
+}
+
+.CLICKABLE-LINK:hover, .CLICKABLE-LINK:focus {
+  color: #e45447;
+}
+
+.BUTTON-LINK:link, .BUTTON-LINK:active, .BUTTON-LINK:visited {
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+.normal-button:hover .BUTTON-LINK {
+  color: #e45447;
+}
+
+.arrow-up-down {
+  display: inline-block;
+  margin-bottom: 2px;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  transform: rotate(-45deg);
+  transition: all 0.5s;
+}
+
+.nav--menu__element:nth-child(4):hover > .arrow-up-down {
+  transform: rotate(135deg);
+  border-color: #e45447;
+}
+
+.nav--menu__element:nth-child(5):hover > .arrow-up-down {
+  transform: rotate(135deg);
+  border-color: #e45447;
 }
 
 .TITLE {
@@ -45,6 +91,9 @@
     transform: translateY(10rem);
     opacity: 0;
   }
+  75% {
+    transform: translateY(-0.5rem);
+  }
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -70,8 +119,8 @@
 }
 .main--heading__title .main-comment {
   margin-bottom: 3.5rem;
-  animation-name: top-to-bottom;
-  animation-duration: 2s;
+  opacity: 0;
+  animation: top-to-bottom 2s forwards;
 }
 .main--heading__title .main-comment .main-button {
   border: none;
@@ -93,12 +142,14 @@
 }
 .main--heading__title .main-title {
   font-size: 7.3rem;
+  opacity: 0;
   padding-left: 0.5rem;
-  animation: bottom-to-top 2s;
+  animation: bottom-to-top 2s 1s forwards;
   margin-bottom: 1.2rem;
 }
 .main--heading__title .sub-title {
-  animation: bottom-to-top 2s;
+  opacity: 0;
+  animation: bottom-to-top 2s 2s forwards;
   max-width: 47.6rem;
   line-height: 1.5;
   color: #777777;
@@ -110,7 +161,7 @@
 .normal-button {
   border: 0.3rem solid transparent;
   background-color: #e45447;
-  padding: 2.5rem 8.3rem;
+  padding: 1.8rem 6.2rem;
   border-radius: 5rem;
   color: #fff;
   transition: 0.3s;
@@ -119,6 +170,33 @@
   background-color: #fff;
   color: #e45447;
   border: 0.3rem solid #e45447;
+}
+
+.nav {
+  height: 8.5rem;
+  z-index: 1;
+  text-align: center;
+  background: linear-gradient(to right, #fff, #fff 70.15%, #90acd2 70.15%);
+}
+.nav--container {
+  height: inherit;
+  margin-left: 15.5rem;
+  width: 80rem;
+  max-width: 80em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav--menu {
+  display: flex;
+  flex-direction: row;
+}
+.nav--menu__element {
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  margin: 3rem;
 }
 
 * {
@@ -132,7 +210,7 @@ html {
 }
 
 body {
-  font-family: "Lexend Deca", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -2,6 +2,10 @@
 
 //Absolute images
 
+.LOGO-IMAGE {
+  width: 5rem;
+}
+
 .PROFILE-PIC {
   position: absolute;
   right: 11rem;
@@ -9,7 +13,67 @@
   width: 46%;
 }
 
+//ANCHOR TAGS {NORMAL}
+
+.CLICKABLE-LINK {
+  &:link,
+  &:visited,
+  &:active {
+    text-decoration: none;
+    color: variables.$black;
+  }
+
+  &:hover,
+  &:focus {
+    color: variables.$orange-red;
+  }
+}
+// ANCHOR TAGS INSIDE BUTTONS
+
+.BUTTON-LINK {
+  &:link,
+  &:active,
+  &:visited {
+    text-decoration: none;
+    font-family: variables.$font-para;
+    color: variables.$white;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+  }
+}
+
+.normal-button:hover .BUTTON-LINK {
+  color: variables.$orange-red;
+}
+
+// DROP DOWN ARROWS UP AND DOWN
+
+.arrow-up-down {
+  display: inline-block;
+  margin-bottom: 2px;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid variables.$black;
+  border-bottom: 2px solid variables.$black;
+  transform: rotate(-45deg);
+  transition: all 0.5s;
+}
+//{for portfolio nav}
+.nav--menu__element:nth-child(4):hover > .arrow-up-down {
+  transform: rotate(135deg);
+  border-color: variables.$orange-red;
+}
+
+//{for blog nav}
+.nav--menu__element:nth-child(5):hover > .arrow-up-down {
+  transform: rotate(135deg);
+  border-color: variables.$orange-red;
+}
+
+//Change Navigation pane when scrolled more than the width of the navigation box.
+
 //font sizes and colors
+
 .TITLE {
   font-size: variables.$title-desktop-size;
   font-weight: 800;
@@ -18,7 +82,7 @@
 
 .SUBTITLE {
   font-size: variables.$subtitle-desktop-size;
-  font-family: variables.$font-para;
+  font-family: variables.$font-subtitle;
   font-weight: 400;
 }
 
@@ -51,6 +115,7 @@
     transform: translateY(-10rem);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -62,6 +127,11 @@
     transform: translateY(10rem);
     opacity: 0;
   }
+
+  75% {
+    transform: translateY(-0.5rem);
+  }
+
   100% {
     transform: translateY(0);
     opacity: 1;
