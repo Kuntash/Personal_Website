@@ -1,4 +1,3 @@
-
 .LOGO-IMAGE {
   width: 5rem;
 }
@@ -14,7 +13,6 @@
   text-decoration: none;
   color: #000000;
 }
-
 .CLICKABLE-LINK:hover, .CLICKABLE-LINK:focus {
   color: #e45447;
 }
