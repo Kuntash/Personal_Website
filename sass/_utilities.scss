@@ -48,6 +48,28 @@
 
 // DROP DOWN ARROWS UP AND DOWN
 
+.arrow-up-down {
+  display: inline-block;
+  margin-bottom: 2px;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid variables.$black;
+  border-bottom: 2px solid variables.$black;
+  transform: rotate(-45deg);
+  transition: all 0.5s;
+}
+//{for portfolio nav}
+.nav--menu__element:nth-child(4):hover > .arrow-up-down {
+  transform: rotate(135deg);
+  border-color: variables.$orange-red;
+}
+
+//{for blog nav}
+.nav--menu__element:nth-child(5):hover > .arrow-up-down {
+  transform: rotate(135deg);
+  border-color: variables.$orange-red;
+}
+
 //font sizes and colors
 
 .TITLE {

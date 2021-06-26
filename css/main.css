@@ -29,6 +29,27 @@
   color: #e45447;
 }
 
+.arrow-up-down {
+  display: inline-block;
+  margin-bottom: 2px;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  transform: rotate(-45deg);
+  transition: all 0.5s;
+}
+
+.nav--menu__element:nth-child(4):hover > .arrow-up-down {
+  transform: rotate(135deg);
+  border-color: #e45447;
+}
+
+.nav--menu__element:nth-child(5):hover > .arrow-up-down {
+  transform: rotate(135deg);
+  border-color: #e45447;
+}
+
 .TITLE {
   font-size: 7.3rem;
   font-weight: 800;
