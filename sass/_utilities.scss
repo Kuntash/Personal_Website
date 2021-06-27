@@ -102,6 +102,11 @@
   font-size: variables.$para-desktop-size;
 }
 
+.SM-PARA {
+  font-size: variables.$sm-para-desktop-size;
+  font-weight: 400;
+}
+
 .font-blue-dark {
   color: variables.$blue-dark;
 }
