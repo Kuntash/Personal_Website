@@ -5,7 +5,7 @@
 .PROFILE-PIC {
   position: absolute;
   right: 11rem;
-  top: 3.7rem;
+  top: 11.7rem;
   width: 46%;
 }
 
@@ -48,6 +48,18 @@
 .nav--menu__element:nth-child(5):hover > .arrow-up-down {
   transform: rotate(135deg);
   border-color: #e45447;
+}
+
+.NAV-ON-SCROLL {
+  animation: nav-appear 1s forwards;
+  width: 100vw;
+  box-shadow: 0 1.5px 26px 16px rgba(119, 119, 119, 0.3);
+}
+
+.CONTAINER-ON-SCROLL {
+  width: auto !important;
+  margin-right: 15rem;
+  max-width: inherit !important;
 }
 
 .TITLE {
@@ -97,7 +109,16 @@
     opacity: 1;
   }
 }
+@keyframes nav-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .main {
+  overflow: hidden;
   height: 100vh;
   position: relative;
   background: linear-gradient(to right, #fff, #fff 70.15%, #90acd2 70.15%);
@@ -163,6 +184,7 @@
   border-radius: 5rem;
   color: #fff;
   transition: 0.3s;
+  cursor: pointer;
 }
 .normal-button:hover, .normal-button:active {
   background-color: #fff;
@@ -171,10 +193,11 @@
 }
 
 .nav {
+  position: fixed;
   height: 8.5rem;
   z-index: 1;
   text-align: center;
-  background: linear-gradient(to right, #fff, #fff 70.15%, #90acd2 70.15%);
+  background-color: #fff;
 }
 .nav--container {
   height: inherit;
@@ -205,6 +228,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {

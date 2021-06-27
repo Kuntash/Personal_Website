@@ -9,7 +9,7 @@
 .PROFILE-PIC {
   position: absolute;
   right: 11rem;
-  top: 3.7rem;
+  top: 11.7rem;
   width: 46%;
 }
 
@@ -72,6 +72,18 @@
 
 //Change Navigation pane when scrolled more than the width of the navigation box.
 
+.NAV-ON-SCROLL {
+  animation: nav-appear 1s forwards;
+  width: 100vw;
+  box-shadow: 0 1.5px 26px 16px rgba(variables.$grey-dark, 0.3);
+}
+
+//Change container size when scrolled down
+.CONTAINER-ON-SCROLL {
+  width: auto !important;
+  margin-right: 15rem;
+  max-width: inherit !important;
+}
 //font sizes and colors
 
 .TITLE {
@@ -134,6 +146,16 @@
 
   100% {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes nav-appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
     opacity: 1;
   }
 }
