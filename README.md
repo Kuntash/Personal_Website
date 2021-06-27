@@ -16,5 +16,20 @@
     > Two Spans for Designation and interest highlighting
 
   - ### SKILLS BLOCK:
+
     > A Button like box to list the names of web technologies, languages and frameworks I know (Carousel Effect using javascript).
-  -
+
+    > Use the concept of image-slider carousel from Dev-ed' lecture.
+
+  - ### ABOUT SECTION:
+
+    > Give a padding to the section, white background.
+    > Create Two divs, one for the image and the other for the description.
+
+    > In the Description div, Make three divs, one for the heading, one for details and one to contain the two buttons i.e. Resume and More info.
+
+  - ### LATEST WORKS:
+
+    > Display all your Portfolio Projects as grid items.
+
+    > Arrange them into categories using the concept of pagination.
