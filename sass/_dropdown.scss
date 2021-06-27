@@ -1,0 +1,27 @@
+@use 'variables';
+@use 'utilities';
+
+.dropdown {
+  position: absolute;
+  background-color: variables.$white;
+  padding: 2rem;
+  width: 15rem;
+  top: 5.5rem;
+  box-shadow: 0 0 1rem rgba(variables.$grey-dark, 0.3);
+  text-align: left;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 1s;
+  &-item {
+    font-family: variables.$font-sm-para;
+  }
+
+  //Give bottom margin to all the dropdown-item except the last one
+  &-item:not(:last-child) {
+    @include utilities.BOTTOM-MARGIN(1rem);
+  }
+}
+
+.nav--menu:hover .nav--menu__element:hover > .dropdown {
+  transform: scaleY(1);
+}

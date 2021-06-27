@@ -6,7 +6,7 @@
   border-radius: 5rem;
   color: variables.$white;
   transition: 0.3s;
-
+  cursor: pointer;
   &:hover,
   &:active {
     background-color: variables.$white;

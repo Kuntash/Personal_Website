@@ -5,7 +5,7 @@
 .PROFILE-PIC {
   position: absolute;
   right: 11rem;
-  top: 3.7rem;
+  top: 11.7rem;
   width: 46%;
 }
 
@@ -50,6 +50,18 @@
   border-color: #e45447;
 }
 
+.NAV-ON-SCROLL {
+  animation: nav-appear 1s forwards;
+  width: 100vw;
+  box-shadow: 0 1.5px 26px 16px rgba(119, 119, 119, 0.3);
+}
+
+.CONTAINER-ON-SCROLL {
+  width: auto !important;
+  margin-right: 15rem;
+  max-width: inherit !important;
+}
+
 .TITLE {
   font-size: 7.3rem;
   font-weight: 800;
@@ -64,6 +76,11 @@
 
 .PARA {
   font-size: 1.8rem;
+}
+
+.SM-PARA {
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .font-blue-dark {
@@ -97,7 +114,83 @@
     opacity: 1;
   }
 }
+@keyframes nav-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.normal-button {
+  border: 0.3rem solid transparent;
+  background-color: #e45447;
+  padding: 1.8rem 6.2rem;
+  border-radius: 5rem;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.normal-button:hover, .normal-button:active {
+  background-color: #fff;
+  color: #e45447;
+  border: 0.3rem solid #e45447;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: #fff;
+  padding: 2rem;
+  width: 15rem;
+  top: 5.5rem;
+  box-shadow: 0 0 1rem rgba(119, 119, 119, 0.3);
+  text-align: left;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 1s;
+}
+.dropdown-item {
+  font-family: "Lexend Deca", sans-serif;
+}
+.dropdown-item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.nav--menu:hover .nav--menu__element:hover > .dropdown {
+  transform: scaleY(1);
+}
+
+.nav {
+  position: fixed;
+  height: 8.5rem;
+  z-index: 1;
+  text-align: center;
+  background-color: #fff;
+  transition: width 1s;
+}
+.nav--container {
+  height: inherit;
+  margin-left: 15.5rem;
+  width: 80rem;
+  max-width: 80em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav--menu {
+  display: flex;
+  flex-direction: row;
+}
+.nav--menu__element {
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  margin: 3rem;
+}
+
 .main {
+  overflow: hidden;
   height: 100vh;
   position: relative;
   background: linear-gradient(to right, #fff, #fff 70.15%, #90acd2 70.15%);
@@ -156,47 +249,6 @@
   margin-top: 5.6rem;
 }
 
-.normal-button {
-  border: 0.3rem solid transparent;
-  background-color: #e45447;
-  padding: 1.8rem 6.2rem;
-  border-radius: 5rem;
-  color: #fff;
-  transition: 0.3s;
-}
-.normal-button:hover, .normal-button:active {
-  background-color: #fff;
-  color: #e45447;
-  border: 0.3rem solid #e45447;
-}
-
-.nav {
-  height: 8.5rem;
-  z-index: 1;
-  text-align: center;
-  background: linear-gradient(to right, #fff, #fff 70.15%, #90acd2 70.15%);
-}
-.nav--container {
-  height: inherit;
-  margin-left: 15.5rem;
-  width: 80rem;
-  max-width: 80em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav--menu {
-  display: flex;
-  flex-direction: row;
-}
-.nav--menu__element {
-  position: relative;
-  font-weight: 700;
-  letter-spacing: 0.2rem;
-  margin: 3rem;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -205,6 +257,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {

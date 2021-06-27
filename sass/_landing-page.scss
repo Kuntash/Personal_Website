@@ -4,6 +4,7 @@
 // Main section
 
 .main {
+  overflow: hidden;
   height: 100vh;
   position: relative;
   background: linear-gradient(
@@ -70,7 +71,7 @@
       }
 
       //SUBTITLE: DESIGNATION AND CURRENT INFO
-      
+
       .sub-title {
         opacity: 0;
         animation: bottom-to-top 2s 2s forwards;

@@ -1,15 +1,12 @@
 @use 'variables';
 
 .nav {
+  position: fixed;
   height: 8.5rem;
   z-index: 1;
   text-align: center;
-  background: linear-gradient(
-    to right,
-    variables.$white,
-    variables.$white 70.15%,
-    variables.$blue-dark 70.15%
-  );
+  background-color: variables.$white;
+  transition: width 1s;
 
   // NAVIGATION CONTAINER
 
