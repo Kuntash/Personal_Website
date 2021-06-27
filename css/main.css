@@ -139,6 +139,7 @@
 
 .dropdown {
   position: absolute;
+  background-color: #fff;
   padding: 2rem;
   width: 15rem;
   top: 5.5rem;
@@ -146,7 +147,7 @@
   text-align: left;
   transform: scaleY(0);
   transform-origin: top;
-  transition: all 0.5s;
+  transition: all 1s;
 }
 .dropdown-item {
   font-family: "Lexend Deca", sans-serif;
@@ -165,6 +166,7 @@
   z-index: 1;
   text-align: center;
   background-color: #fff;
+  transition: width 1s;
 }
 .nav--container {
   height: inherit;

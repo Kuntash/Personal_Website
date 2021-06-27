@@ -3,6 +3,7 @@
 
 .dropdown {
   position: absolute;
+  background-color: variables.$white;
   padding: 2rem;
   width: 15rem;
   top: 5.5rem;
@@ -10,7 +11,7 @@
   text-align: left;
   transform: scaleY(0);
   transform-origin: top;
-  transition: all 0.5s;
+  transition: all 1s;
   &-item {
     font-family: variables.$font-sm-para;
   }
