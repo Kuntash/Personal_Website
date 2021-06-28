@@ -21,6 +21,8 @@
 
     > Use the concept of image-slider carousel from Dev-ed' lecture.
 
+    > cloneNode, removeChild, appendChild (DOM functions);
+
   - ### ABOUT SECTION:
 
     > Give a padding to the section, white background.
